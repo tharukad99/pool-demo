@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Mount | Premium Pool & Lounge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <header>
+            <div class="logo" onclick="showSection('home')">
+                <span>VIBE</span> MOUNT
+            </div>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="#" onclick="showSection('home')" id="nav-home" class="active">Home</a></li>
+                    <li><a href="#" onclick="showSection('about')" id="nav-about">About</a></li>
+                    <li><a href="#" onclick="showSection('services')" id="nav-services">Services</a></li>
+                    <li><a href="#" onclick="showSection('booking')" id="nav-booking">Book a Table</a></li>
+                    <li><a href="#" onclick="showSection('account')" id="nav-account">My Bookings</a></li>
+                    <li><a href="#" onclick="showSection('rewards')" id="nav-rewards">Rewards</a></li>
+                </ul>
+            </nav>
+            <div class="auth-btns" id="auth-controls">
+                <!-- Dynamically populated -->
+            </div>
+        </header>
+
+        <main>
+            <!-- Home Section -->
+            <section id="home" class="active">
+                <div class="hero" id="hero-bg">
+                    <h1>Shatter the <span class="text-gradient">Silence.</span> <br> Rule the <span class="text-gradient">Table.</span></h1>
+                    <p>Experience the most exclusive pool lounge in the city. Professional grade tables, artisan drinks, and a community of masters.</p>
+                    <div class="auth-btns">
+                        <button class="btn btn-primary" onclick="showSection('booking')">Reserve a Table</button>
+                        <button class="btn btn-outline" onclick="showSection('rewards')">Explore Loyalty</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- About Section -->
+            <section id="about">
+                <div style="max-width: 1200px; margin: 0 auto;">
+                    <h2 class="section-title">The <span class="text-gradient">Vibe</span> Legacy</h2>
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <p>Founded in the heart of the city, Vibe Mount isn't just a pool hall—it's a sanctuary for the modern connoisseur. We've combined the grit of traditional billiards with the sophistication of a high-end lounge.</p>
+                            <p>Our tables are meticulously maintained, featuring professional-grade slate and world-class felt, ensuring every shot is as precise as your ambition. Whether you're a seasoned shark or a casual player, Vibe Mount offers an atmosphere that elevates your game.</p>
+                        </div>
+                        <div class="about-image" id="about-img-container"></div>
+                    </div>
+
+                    <!-- Merged Contact Info -->
+                    <div style="margin-top: 80px; border-top: 1px solid var(--glass-border); padding-top: 60px;">
+                        <h2 class="section-title">Join the <span class="text-gradient">Conversation</span></h2>
+                        <div class="contact-grid">
+                            <div class="contact-info">
+                                <p style="color: var(--text-dim); margin-bottom: 20px;">Have a question about our tables or membership? Reach out and our concierge will assist you.</p>
+                                <div class="info-item">
+                                    <span class="icon">📍</span>
+                                    <div>
+                                        <h4>Location</h4>
+                                        <p>123 Neon Alway, Downtown</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <span class="icon">📞</span>
+                                    <div>
+                                        <h4>Phone</h4>
+                                        <p>+1 (555) VIBE-MNT</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <span class="icon">✉️</span>
+                                    <div>
+                                        <h4>Email</h4>
+                                        <p>concierge@vibemount.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-container" style="margin: 0; width: 100%;">
+                                <form onsubmit="event.preventDefault(); showToast('Message sent! We\'ll be in touch.');">
+                                    <div class="input-group">
+                                        <label>Name</label>
+                                        <input type="text" placeholder="John Wick" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <label>Email</label>
+                                        <input type="email" placeholder="john@continental.com" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <label>Message</label>
+                                        <textarea style="width:100%; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); padding: 15px 20px; border-radius: 12px; color: #fff; outline: none; min-height: 100px;" placeholder="Tell us more..."></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Send Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services">
+                <div style="max-width: 1200px; margin: 0 auto;">
+                    <h2 class="section-title" style="text-align: center; margin-bottom: 50px;">Elevate Your <span class="text-gradient">Experience</span></h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">🎱</div>
+                            <h3>Private Coaching</h3>
+                            <p>Master the art of the break with 1-on-1 sessions from local professionals.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🏆</div>
+                            <h3>Exclusive Tournaments</h3>
+                            <p>Compete for the crown and high-stakes rewards in our weekly elite series.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🥃</div>
+                            <h3>Artisan Lounge</h3>
+                            <p>Savor hand-crafted cocktails and premium spirits between frames.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🎈</div>
+                            <h3>Private Events</h3>
+                            <p>Rent out our VIP mezzanine for birthdays, corporate mixers, or private parties.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Booking Section -->
+            <section id="booking">
+                <div style="max-width: 1200px; margin: 0 auto;">
+                    <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 40px;">Select Your <span class="text-gradient">Station</span></h2>
+                    <div class="tables-grid" id="tables-grid">
+                        <!-- Polulated by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rewards Section -->
+            <section id="rewards">
+                <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+                    <h2 style="font-size: 3rem; margin-bottom: 40px;">Elite <span class="text-gradient">Circle</span></h2>
+                    
+                    <div class="points-container">
+                        <div class="point-stat">
+                            <p>Current Balance</p>
+                            <h2 id="user-points">0</h2>
+                            <p>Cue Points</p>
+                        </div>
+                        <div style="flex: 1; min-width: 300px; text-align: left;">
+                            <h3 style="margin-bottom: 15px; color: var(--accent);">Loyalty Tier: Silver Member</h3>
+                            <p style="color: var(--text-dim);">Earn 50 points with every booking and 10 points for every hour you play. Redeem for free games, drinks, or exclusive tournament entries.</p>
+                            <div style="background: rgba(255,255,255,0.05); height: 10px; border-radius: 5px; margin-top: 20px;">
+                                <div id="point-progress" style="background: var(--primary); width: 25%; height: 100%; border-radius: 5px; box-shadow: var(--neon-glow);"></div>
+                            </div>
+                            <p style="font-size: 0.8rem; margin-top: 10px; color: var(--text-dim);">350 points until Gold Tier</p>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                        <div class="table-card" style="text-align: left;">
+                            <h4 style="color: var(--primary);">Free Hour</h4>
+                            <p style="font-size: 0.9rem; margin: 10px 0;">Redeem 500 points for a free hour on any professional table.</p>
+                            <button class="btn btn-outline" style="width: 100%;" disabled>Redeem (Limited)</button>
+                        </div>
+                        <div class="table-card" style="text-align: left;">
+                            <h4 style="color: var(--accent);">Gold Member Cue</h4>
+                            <p style="font-size: 0.9rem; margin: 10px 0;">Earned by reaching 10,000 points. Lifetime prestige status.</p>
+                            <button class="btn btn-outline" style="width: 100%;" disabled>Locked</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Login Section -->
+            <section id="login">
+                <div class="form-container">
+                    <h2 class="form-title">Welcome <span class="text-gradient">Back</span></h2>
+                    <form id="login-form">
+                        <div class="input-group">
+                            <label>Username</label>
+                            <input type="text" id="login-username" placeholder="Enter your username" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" id="login-password" placeholder="••••••••" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Unlock Membership</button>
+                    </form>
+                    <p style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: var(--text-dim);">
+                        Don't have an account? <a href="#" onclick="showSection('register')" style="color: var(--primary); text-decoration: none;">Register Now</a>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Register Section -->
+            <section id="register">
+                <div class="form-container">
+                    <h2 class="form-title">Join the <span class="text-gradient">Elite</span></h2>
+                    <form id="register-form">
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" id="reg-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Username</label>
+                            <input type="text" id="reg-username" placeholder="cue_master" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" id="reg-password" placeholder="••••••••" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Get Started</button>
+                    </form>
+                    <p style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: var(--text-dim);">
+                        Already a member? <a href="#" onclick="showSection('login')" style="color: var(--primary); text-decoration: none;">Sign In</a>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Dashboard/My Account Section -->
+            <section id="account">
+                <div style="max-width: 1000px; margin: 0 auto;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
+                        <div>
+                            <h2 style="font-size: 2.5rem;">Player <span class="text-gradient" id="player-name">Profile</span></h2>
+                            <p style="color: var(--text-dim);">Active Member since 2024</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <p style="color: var(--primary); font-weight: 800; font-size: 1.5rem;" id="player-points-small">0 pts</p>
+                            <button class="btn btn-outline" onclick="logout()" style="padding: 5px 15px; font-size:0.8rem; margin-top: 10px;">Sign Out</button>
+                        </div>
+                    </div>
+
+                    <div class="table-card" style="padding: 40px;">
+                        <h3 style="margin-bottom: 30px;">Active & Recent <span class="text-gradient">Bookings</span></h3>
+                        <table class="bookings-list">
+                            <thead>
+                                <tr style="color: var(--text-dim); font-size: 0.8rem; text-align: left; text-transform: uppercase; letter-spacing: 1px;">
+                                    <th style="padding: 0 20px;">Table</th>
+                                    <th style="padding: 0 20px;">Time</th>
+                                    <th style="padding: 0 20px;">Points Earned</th>
+                                    <th style="padding: 0 20px;">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bookings-tbody">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                        <div id="no-bookings" style="text-align: center; padding: 40px; color: var(--text-dim); display: none;">
+                            No active bookings found. <a href="#" onclick="showSection('booking')" style="color: var(--primary);">Book a table now.</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div style="margin-bottom: 20px;">
+                <span style="color: var(--primary); font-weight: 800;">VIBE</span> MOUNT
+            </div>
+            <p>&copy; 2024 Vibe Mount Luxury Lounges. All rights reserved.</p>
+        </footer>
+
+        <!-- Toast Notifications -->
+        <div id="toast">Message goes here</div>
+    </div>
+
+    <!-- Booking Modal (Custom) -->
+    <div id="booking-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 3000; justify-content: center; align-items: center; padding: 20px;">
+        <div class="form-container" style="max-width: 500px; margin: 0; background: var(--bg-deep); border-color: var(--primary); padding: 30px;">
+            <h2 class="form-title" style="margin-bottom: 20px;">Reserve <span class="text-gradient">Station</span></h2>
+            
+            <div id="modal-details" style="margin-bottom: 20px; text-align: left; background: rgba(255,255,255,0.03); padding: 15px; border-radius: 12px; border-left: 3px solid var(--primary);">
+                <!-- Filled by JS -->
+            </div>
+
+            <div class="booking-flow">
+                <span class="selection-label">Select Date (Next 30 Days)</span>
+                <div class="date-grid" id="date-grid">
+                    <!-- Filled by JS -->
+                </div>
+
+                <span class="selection-label">Select Time Slot</span>
+                <div class="time-grid" id="time-grid">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+
+            <div class="auth-btns" style="gap: 10px; margin-top: 30px;">
+                <button class="btn btn-outline" onclick="closeModal()" style="flex: 1;">Cancel</button>
+                <button class="btn btn-primary" onclick="confirmBooking()" style="flex: 2;">Confirm Reservation</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
